@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+
+<body>
+<div id="canvas">
+
+<div class="zoom-icon zoom-icon-in"></div>
+<div class="title-header">She exist Magazine</div>
+
+<div class="magazine-viewport">
+	<div class="container">
+		<div class="magazine">
+			<!-- Next button -->
+			<div ignore="1" class="next-button"></div>
+			<!-- Previous button -->
+			<div ignore="1" class="previous-button"></div>
+		</div>
+	</div>
+    <%const year=new Date().getFullYear()%>
+   
+	<div class="bottom">
+        <footer class="dev">
+            <div>copyright &copy;<%=year %> </div>
+           <div> Developed by <a class="links" href="mailto:admin@ecsltd.io"> ECS LTD</a></div>
+        </footer>
+		<div id="slider-bar" class="turnjs-slider">
+			<div id="slider"></div>
+		</div>
+       
+	</div>
+   
+</div>
+
+<%- include('partials/footer'); -%>
