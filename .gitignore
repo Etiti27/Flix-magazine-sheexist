@@ -135,6 +135,8 @@ dist
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
+tes.ejs
+testt.ejs
 
 # Optional stylelint cache
 
