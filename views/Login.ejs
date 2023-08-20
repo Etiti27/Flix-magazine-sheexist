@@ -17,7 +17,13 @@
   
      
       <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017– <%=currentYear %></p>
+      
+    </form>
+    <br>
+    <br>
+    <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017– <%=currentYear %></p> -->
+    <form action="/register" method="get">
+      <div class="error1">I don't have account yet?<span><button type="submit" class="" id="error">Register</button></span></div>
     </form>
   </main>
   <%- include('partials/footer'); -%>

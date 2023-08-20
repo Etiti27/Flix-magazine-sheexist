@@ -48,7 +48,7 @@ function loadPage(page, pageElement) {
 
 	// Load the page
 
-	img.attr('src', 'pages/first/' +  page + '.jpg');
+	img.attr('src', 'pages/firstEdition/' +  page + '.jpg');
 
 	loadRegions(page, pageElement);
 
@@ -179,7 +179,7 @@ function loadLargePage(page, pageElement) {
 
 	// Loadnew page
 	
-	img.attr('src', 'pages/first/' +  page + '.jpg');
+	img.attr('src', 'pages/firstEdition/' +  page + '.jpg');
 }
 
 // Load small page
@@ -193,7 +193,7 @@ function loadSmallPage(page, pageElement) {
 	img.unbind('load');
 	// Loadnew page
 
-	img.attr('src', 'pages/first/' +  page + '.jpg');
+	img.attr('src', 'pages/firstEdition/' +  page + '.jpg');
 }
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
