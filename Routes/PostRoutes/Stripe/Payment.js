@@ -3,9 +3,9 @@ require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const firstMagazine=require('../../../MongoDB/FirstMagSchema');
-const endpointSecret = process.env.TEST_ENDPOINTSECRET;
+const endpointSecret = process.env.ENDPOINTSECRET;
 const Stripe = require('stripe');
-const stripe = Stripe(process.env.API_TEST_KEY);
+const stripe = Stripe(process.env.API_KEY);
 
 
 
@@ -29,8 +29,8 @@ router.get('/payment', (req, res) => {
 // let user;
 // console.log(user);
 router.post('/create-checkout-session', async (req, res) => {
-    console.log(prices);
-    console.log(usernames);
+    // console.log(prices);
+    // console.log(usernames);
     // username=req.session.username
     // console.log(req.session.username);
     
@@ -74,7 +74,7 @@ router.post('/webhook',  express.raw({type: 'application/json'}), async (request
   const sig = request.headers['stripe-signature'];
  
 
-console.log(`i am the secind user ${usernames} & ${prices}`);
+// console.log(`i am the secind user ${usernames} & ${prices}`);
   let event;
 
   try {
@@ -103,7 +103,7 @@ console.log(`i am the secind user ${usernames} & ${prices}`);
       break;
     // ... handle other event types
     default:
-      console.log(`Unhandled event type ${event.type}`);
+      // console.log(`Unhandled event type ${event.type}`);
   }
 
   // Return a 200 response to acknowledge receipt of the event
