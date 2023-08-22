@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -77,4 +77,51 @@ body {
   color:red;
   font-style: italic;
 
+}
+
+#price{
+  text-align: right;
+ color: red;
+  
+}
+input{
+  background-color: #ffffff;
+}
+
+.payment{
+  text-transform: capitalize;
+  text-align: center;
+  padding-left: 100%;
+  text-decoration: underline;
+  padding-top: -20%;
+  background-color: red;
+  
+}
+.error{
+  color: red;
+  text-align: center;
+  text-transform: capitalize;
+  font-style: italic;
+}
+#error{
+  background-color: white;
+  text-decoration: none;
+  border: none;
+  color: blue;
+}
+#error:hover{
+  background-color: blue;
+  border-radius: 80px;
+  color:red
+}
+footer{
+  text-align: center;
+  background-color: #ECECEC;
+  /* position:fixed; */
+  width: 100%;
+  bottom: 0;
+  
+}
+.advertise{
+  text-decoration: none;
 }

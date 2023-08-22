@@ -1,6 +1,6 @@
 const express= require('express');
 const router=express.Router();
-const User= require('../../MongoDB/userSchema');
+const User= require('../../userSchema');
 const passport=require('passport');
 const session=require('express-session');
 const passportLocalMongoose=require('passport-local-mongoose');

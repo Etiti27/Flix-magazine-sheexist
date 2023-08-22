@@ -10,6 +10,11 @@ const RegisterRoute=require('./Routes/PostRoutes/Register');
 const LoginRoute=require('./Routes/PostRoutes/Login');
 const AllmagazineRoute=require('./Routes/PostRoutes/Allmagazine');
 const populate=require('./Routes/PostRoutes/Populate');
+const Payment=require('./Routes/PostRoutes/Stripe/Payment');
+const NotFound=require('./Routes/PostRoutes/NotFound');
+const ResetPassword=require('./Routes/PostRoutes/ResetPassword');
+
+// const Webhook=require('./Routes/PostRoutes/Stripe/Webhook');
 
 
 
@@ -29,11 +34,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+// console.log(`the user is ${userr}`);
 app.use('/register', RegisterRoute);
 app.use('/login', LoginRoute);
 app.use('/allmagazine', AllmagazineRoute);
 app.use('/populate', populate);
+app.use('/', Payment);
+app.use('/notfound', NotFound);
+app.use('/resetpassword', ResetPassword);
 
 
 
@@ -44,7 +52,4 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => {
     console.log('server is running!!!');
-})
-
-
-
+});
